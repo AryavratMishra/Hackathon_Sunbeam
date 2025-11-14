@@ -1,7 +1,23 @@
 :root{ --bg: #f4f6f8; --card: #fff; --accent: #4f46e5 }
 body{ margin:0; font-family: Inter, system-ui, Arial, sans-serif; background:var(--bg); color:#111 }
 .app-container{ min-height:100vh; display:flex; flex-direction:column }
-.navbar{ background: linear-gradient(90deg,#fff,#f8fafc); padding:12px 20px; box-shadow:0 1px 4px rgba(0,0,0,0.05) }
+.navbar {
+  background: linear-gradient(90deg, #000000, #1a1a1a);
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.navbar a {
+  color: white !important;
+  font-weight: 600;
+}
+
+.navbar span {
+  color: #f2f2f2;
+}
+
+
+
 .container{ max-width:980px; margin:24px auto; padding:12px }
 .card{ background:var(--card); padding:16px; border-radius:8px; box-shadow:0 1px 6px rgba(2,6,23,0.06) }
 .grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:16px }
@@ -20,10 +36,11 @@ body{ margin:0; font-family: Inter, system-ui, Arial, sans-serif; background:var
   border: none;
   cursor: pointer;
   font-weight: 600;
-  background: #4f46e5;
+  background: #E41E2B;
   color: white;
   transition: 0.2s ease;
 }
+
 
 .btn:hover {
   opacity: 0.85;
@@ -31,6 +48,6 @@ body{ margin:0; font-family: Inter, system-ui, Arial, sans-serif; background:var
 
 .btn.outline {
   background: #fff;
-  color: #4f46e5;
-  border: 2px solid #4f46e5;
+  color: #E41E2B;
+  border: 2px solid #E41E2B;
 }

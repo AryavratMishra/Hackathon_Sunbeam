@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar({ user, onLogout }){
   return (
-    <div className="navbar">
-      <div className="container" style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+    <div className="navbar" style={{color : '#F84464'}}>
+      <div className="container" style={{display:'flex',alignItems:'center',justifyContent:'space-between',color:'#111' }}>
         <div style={{display:'flex',gap:12,alignItems:'center'}}>
           <Link to="/movies" style={{textDecoration:'none',color:'#111',fontWeight:700}}>MovieReviews</Link>
           <Link to="/movies" className="medium">Browse</Link>

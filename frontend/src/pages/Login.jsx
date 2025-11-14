@@ -32,7 +32,7 @@ export default function Login({ onLogin }){
             <input type="password" className="input" value={password} onChange={e=>setPassword(e.target.value)} />
           </div>
           <div style={{display:'flex',gap:8}}>
-            <button className="button primary" type="submit">Login</button>
+            <button className="button primary" type="submit" onClick={onLogin}>Login</button>
           </div>
         </form>
       </div>

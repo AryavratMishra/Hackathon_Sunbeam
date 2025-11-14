@@ -36,6 +36,8 @@ export default function App(){
     setUser(null)
   }
 
+  
+
   return (
     <div className="app-container">
       <Navbar user={user} onLogout={logout} />
