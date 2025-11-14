@@ -1,21 +1,6 @@
 :root{ --bg: #f4f6f8; --card: #fff; --accent: #4f46e5 }
 body{ margin:0; font-family: Inter, system-ui, Arial, sans-serif; background:var(--bg); color:#111 }
 .app-container{ min-height:100vh; display:flex; flex-direction:column }
-.navbar {
-  background: linear-gradient(90deg, #000000, #1a1a1a);
-  padding: 12px 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-}
-
-.navbar a {
-  color: white !important;
-  font-weight: 600;
-}
-
-.navbar span {
-  color: #f2f2f2;
-}
-
 
 
 .container{ max-width:980px; margin:24px auto; padding:12px }
@@ -50,4 +35,76 @@ body{ margin:0; font-family: Inter, system-ui, Arial, sans-serif; background:var
   background: #fff;
   color: #E41E2B;
   border: 2px solid #E41E2B;
+}
+/* NAVBAR CONTAINER */
+.navbar {
+  background: #000;                     /* pure black */
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;              /* center navbar contents */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* NAVBAR INNER WRAPPER */
+.navbar .container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT SIDE (LOGO + REEL) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-reel {
+  height: 30px;
+  width: auto;
+}
+
+/* NAV LINKS */
+.navbar a {
+  color: white !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* BUTTONS FOR LOGIN/REGISTER/PROFILE */
+.button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  background: #E41E2B;   /* BookMyShow red, optional */
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+.button.outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
 }

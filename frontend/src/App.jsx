@@ -7,6 +7,12 @@ import MovieDetail from './pages/MovieDetail'
 import MyReviews from './pages/MyReviews'
 import SharedWithMe from './pages/SharedWithMe'
 import Navbar from './components/Navbar'
+import EditProfile from './pages/EditProfile';
+import ChangePassword from "./pages/ChangePassword";
+import AllReviews from "./pages/AllReviews";
+
+
+
 import { getToken, setTokenLocal, clearAuth } from './utils/auth'
 import api, { setToken } from './api/api'
 
@@ -50,6 +56,12 @@ export default function App(){
           <Route path="/movies/:id" element={<MovieDetail user={user} />} />
           <Route path="/my-reviews" element={<MyReviews user={user} />} />
           <Route path="/shared" element={<SharedWithMe user={user} />} />
+          <Route path="/edit-profile" element={<EditProfile user={user} setUser={setUser} />} />
+          <Route path="/change-password" element={<ChangePassword />} />
+          <Route path="/all-reviews" element={<AllReviews />} />
+
+
+
         </Routes>
       </main>
     </div>

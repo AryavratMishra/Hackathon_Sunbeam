@@ -8,7 +8,7 @@ export default function ReviewForm({ initial = {}, onSubmit }){
   const submit = (e)=>{
     e.preventDefault()
     if(!title) return alert('Title required')
-    if(rating < 1 || rating > 5) return alert('Rating 1-5')
+    if(rating < 1 || rating > 10) return alert('Rating 1-10')
     onSubmit({ title, content, rating })
   }
 
@@ -27,7 +27,7 @@ export default function ReviewForm({ initial = {}, onSubmit }){
         <input type="number" min={1} max={5} className="input" value={rating} onChange={e=>setRating(Number(e.target.value))} />
       </div>
       <div style={{display:'flex',gap:8}}>
-        <button className="button primary" type="submit">Save</button>
+        <button className="button primary" type="submit">Save </button>
       </div>
     </form>
   )

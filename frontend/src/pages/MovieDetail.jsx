@@ -2,11 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import api from '../api/api'
 import ReviewForm from '../components/ReviewForm'
+import { useNavigate } from "react-router-dom";
+
 
 export default function MovieDetail({ user }){
   const { id } = useParams()
   const [movie, setMovie] = useState(null)
   const [reviews, setReviews] = useState([])
+  const navigate = useNavigate();
+
 
   const load = ()=>{
     api.get(`/movies/${id}`).then(r=> setMovie(r.data)).catch(()=>{})
@@ -15,12 +19,17 @@ export default function MovieDetail({ user }){
 
   useEffect(()=>{ load() }, [id])
 
-  const addReview = async (payload)=>{
-    try{
-      await api.post('/reviews', { movieId: Number(id), ...payload })
-      load()
-    }catch(err){ alert(err?.response?.data?.msg || 'Failed') }
+ const addReview = async (payload) => {
+  try {
+    await api.post("/reviews", { movieId: Number(id), ...payload });
+
+    // Redirect to All Reviews PAGE after creating a review
+    navigate("/all-reviews");
+
+  } catch (err) {
+    alert(err?.response?.data?.msg || "Failed");
   }
+};
 
   return (
     <div className="container">
